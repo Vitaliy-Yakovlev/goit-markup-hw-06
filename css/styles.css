@@ -616,6 +616,7 @@ a {
 /* Социальные сети */
 
 .text-footer {
+  display: block;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
@@ -657,6 +658,82 @@ a {
 .link-network-footer:focus {
   background-color: var(--accent-color);
   fill: var(--primary-white-color);
+}
+
+/* Подписаться */
+
+.join-footer {
+  margin-left: auto;
+}
+
+.field-footer {
+  display: flex;
+}
+
+.input-footer {
+  margin: 0;
+  padding: 15px 16px;
+  display: inline-block;
+  min-width: 358px;
+
+  color: var(--primary-white-color);
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-sizing: border-box;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.btn-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid transparent;
+  text-align: center;
+  min-width: 200px;
+  border-radius: 4px;
+  padding: 10px 29px 10px 28px;
+  margin-left: 10px;
+
+  color: var(--primary-white-color);
+  background-color: var(--accent-color);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+
+  cursor: pointer;
+
+  transition-property: color, background-color;
+  transition-duration: 250ms;
+  transition-timing-function: var(--cubic-bezier);
+
+  /* transition: color 250ms var(--cubic-bezier),
+    background-color 250ms var(--cubic-bezier); */
+}
+
+.btn-footer:hover,
+.btn-footer:focus {
+  color: var(--accent-color);
+  background-color: var(--primary-white-color);
+  border: 1px solid transparent;
+  fill: var(--accent-color);
+}
+
+.svg-footer {
+  margin-left: 10px;
+
+  fill: white;
+
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: var(--cubic-bezier);
+}
+
+.btn-footer:hover .svg-footer,
+.btn-footer:focus .svg-footer {
+  fill: var(--accent-color);
 }
 
 /* Стили для Портфолио */
@@ -837,6 +914,8 @@ a {
   top: 50%;
   left: 50%;
 
+  padding: 40px;
+
   width: 528px;
   height: 581px;
 
@@ -856,6 +935,10 @@ a {
 }
 
 .modal-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+
   display: block;
   margin-left: auto;
   margin-top: 8px;
@@ -866,9 +949,190 @@ a {
   border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.1);
   background-color: var(--primary-white-color);
+
+  cursor: pointer;
+
+  transition: fill 250ms var(--cubic-bezier);
 }
 
 .modal-btn:hover,
 .modal-btn:focus {
   fill: var(--accent-color);
+}
+
+/* Форма модального окна */
+
+.svg-modal {
+  transition: fill 250ms var(--cubic-bezier);
+}
+
+.field-modal input:focus-within + .svg-modal,
+.field-modal input:hover + .svg-modal {
+  fill: var(--accent-color);
+}
+
+.field-modal input:focus,
+.field-modal input:hover {
+  border: 1px solid var(--accent-color);
+  border-radius: 4px;
+}
+
+.form-text {
+  display: block;
+  margin-bottom: 4px;
+
+  margin-bottom: 30px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+
+  color: var(--primary-text-color);
+}
+
+.field-modal {
+  position: relative;
+
+  display: block;
+
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+
+  color: var(--title-text-color);
+
+  cursor: pointer;
+}
+
+.input-modal {
+  border: 1px solid #000000;
+  transform: rotate(90deg);
+}
+
+.field-modal input {
+  display: block;
+  margin-bottom: 10px;
+  width: 100%;
+  padding: 15px 14px 15px 42px;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+
+  cursor: pointer;
+
+  transition: border 250ms var(--cubic-bezier);
+}
+
+.svg-modal {
+  position: absolute;
+  left: 21px;
+  top: 50%;
+}
+
+.coment-modal {
+  display: block;
+
+  margin-bottom: 20px;
+  padding: 12px 16px;
+
+  resize: none;
+  width: 100%;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+
+  cursor: pointer;
+
+  transition: border 250ms var(--cubic-bezier);
+}
+
+.coment-modal:hover,
+.coment-modal:focus {
+  border: 1px solid #2196f3;
+  border-radius: 4px;
+}
+
+.field-text {
+  display: block;
+  margin-bottom: 4px;
+}
+
+.checkbox-modal {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+
+  color: var(--title-text-color);
+}
+
+.checkbox-input {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+.checkbox-icon {
+  display: inline-block;
+  margin-right: 7px;
+  width: 16px;
+  height: 15px;
+  background-color: var(--primary-white-color);
+
+  border: 2px solid var(--primary-text-color);
+  border-radius: 2px;
+
+  transition: border 250ms var(--cubic-bezier),
+    background-color 250ms var(--cubic-bezier);
+}
+
+.checkbox-input:checked + .checkbox-icon {
+  background-color: var(--accent-color);
+  border: 2px solid var(--accent-color);
+  background-image: url(../images/iconcheck.svg);
+  background-origin: border-box;
+}
+
+.checkbox-input:checked:focus + .checkbox-icon {
+  box-shadow: 0 0 0 2px #757575;
+}
+
+.link-modal {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+
+  color: var(--accent-color);
+  text-decoration-line: underline;
+}
+
+.link-modal:focus {
+  box-shadow: 0 0 0 1px #757575;
+}
+
+.btn-modal {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px 52px;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+
+  color: var(--primary-white-color);
+
+  background: #188ce8;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+
+.btn-modal:focus {
+  box-shadow: 0 0 0 1px #757575;
 }

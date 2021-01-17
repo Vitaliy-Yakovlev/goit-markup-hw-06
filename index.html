@@ -410,6 +410,7 @@
             >
           </address>
         </div>
+
         <div class="network-footer">
           <b class="text-footer">присоединяйтесь</b>
           <div class="social-network-footer">
@@ -435,6 +436,28 @@
             </a>
           </div>
         </div>
+
+        <div class="join-footer">
+          <b class="text-footer">Подпишитесь на рассылку</b>
+          <form class="form-footer">
+            <label class="field-footer">
+              <input
+                class="input-footer"
+                type="email"
+                name="email"
+                placeholder="E-mail"
+              />
+
+              <button class="btn-footer" type="button">
+                Подписаться
+
+                <svg class="svg-footer" width="20" height="20">
+                  <use href="./images/sprite.svg#send"></use>
+                </svg>
+              </button>
+            </label>
+          </form>
+        </div>
       </div>
     </footer>
 
@@ -447,6 +470,60 @@
             <use href="./images/sprite.svg#plus"></use>
           </svg>
         </button>
+
+        <!-- Форма модального окна -->
+
+        <form class="form-modal">
+          <b class="form-text">Оставьте свои данные, мы вам перезвоним</b>
+
+          <label class="field-modal">
+            <span class="field-text">Имя</span>
+
+            <input type="text" name="user-name" />
+
+            <svg class="svg-modal" width="18px" height="18px">
+              <use xlink:href="./images/sprite.svg#personebp"></use>
+            </svg>
+          </label>
+
+          <label class="field-modal">
+            <span class="field-text">Телефон</span>
+
+            <input type="tel" name="tel" />
+
+            <svg class="svg-modal" width="18px" height="18px">
+              <use xlink:href="./images/sprite.svg#phonebp"></use>
+            </svg>
+          </label>
+
+          <label class="field-modal">
+            <span class="field-text">Почта</span>
+
+            <input type="email" name="email" />
+
+            <svg class="svg-modal" width="18px" height="18px">
+              <use xlink:href="./images/sprite.svg#emailbp"></use>
+            </svg>
+          </label>
+
+          <label class="field-modal">
+            <span class="field-text">Комментарий</span>
+            <textarea
+              class="coment-modal"
+              name="coment"
+              placeholder="Введите текст"
+              rows="7"
+            ></textarea>
+          </label>
+
+          <label class="checkbox-modal">
+            <input class="checkbox-input" type="checkbox" name="" />
+            <span class="checkbox-icon"></span>
+            Соглашаюсь с рассылкой и принимаю
+            <a class="link-modal" href="">Условия договора</a>
+          </label>
+          <button class="btn-modal" type="button">Отправить</button>
+        </form>
       </div>
     </div>
 
