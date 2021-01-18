@@ -48,9 +48,9 @@ a {
 
 /* Утилиты */
 
-:hover,
+/* :hover, */
 :focus {
-  outline: 0;
+  outline: 1px solid rgba(0, 0, 0, 0.1);
   outline-offset: 0;
 }
 
@@ -1098,10 +1098,6 @@ a {
   background-origin: border-box;
 }
 
-.checkbox-input:checked:focus + .checkbox-icon {
-  box-shadow: 0 0 0 2px #757575;
-}
-
 .link-modal {
   font-weight: 400;
   font-size: 14px;
@@ -1109,10 +1105,6 @@ a {
 
   color: var(--accent-color);
   text-decoration-line: underline;
-}
-
-.link-modal:focus {
-  box-shadow: 0 0 0 1px #757575;
 }
 
 .btn-modal {
