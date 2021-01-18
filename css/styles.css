@@ -981,7 +981,7 @@ a {
   display: block;
   margin-bottom: 4px;
 
-  margin-bottom: 30px;
+  margin-bottom: 12px;
   font-weight: 700;
   font-size: 20px;
   line-height: 1.15;
@@ -1013,7 +1013,7 @@ a {
   display: block;
   margin-bottom: 10px;
   width: 100%;
-  padding: 15px 14px 15px 42px;
+  padding: 13px 12px 13px 42px;
 
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
@@ -1044,6 +1044,15 @@ a {
   cursor: pointer;
 
   transition: border 250ms var(--cubic-bezier);
+}
+
+.coment-modal::placeholder {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+
+  color: rgba(117, 117, 117, 0.5);
 }
 
 .coment-modal:hover,
@@ -1098,6 +1107,11 @@ a {
   background-origin: border-box;
 }
 
+.checkbox-input:focus + .checkbox-icon,
+.checkbox-input:hover + .checkbox-icon {
+  border: 2px solid var(--accent-color);
+}
+
 .link-modal {
   font-weight: 400;
   font-size: 14px;
@@ -1109,12 +1123,16 @@ a {
 
 .btn-modal {
   display: block;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  min-width: 200px;
+
   margin-left: auto;
   margin-right: auto;
-  padding: 10px 52px;
-  align-items: center;
-  text-align: center;
-  letter-spacing: 0.06em;
+  padding: 10px;
 
   color: var(--primary-white-color);
 
