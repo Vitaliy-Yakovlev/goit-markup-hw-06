@@ -1069,6 +1069,7 @@ a {
 .checkbox-modal {
   display: flex;
   align-items: center;
+  justify-content: center;
   margin-bottom: 30px;
   text-align: center;
   font-weight: 400;
@@ -1113,6 +1114,9 @@ a {
 }
 
 .link-modal {
+  display: inline-block;
+  margin-left: 4px;
+
   font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
