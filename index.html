@@ -473,7 +473,7 @@
 
         <!-- Форма модального окна -->
 
-        <form class="form-modal">
+        <form class="form-modal js-speaker-form">
           <b class="form-text">Оставьте свои данные, мы вам перезвоним</b>
 
           <label class="field-modal">
@@ -530,5 +530,21 @@
     <!-- js Для Модального окна -->
 
     <script src="./js/modal.js"></script>
+
+    <script>
+      (() => {
+        document
+          .querySelector('.js-speaker-form')
+          .addEventListener('submit', e => {
+            e.preventDefault();
+
+            new FormData(e.currentTarget).forEach((value, name) =>
+              console.log(`${name}: ${value}`),
+            );
+
+            e.currentTarget.reset();
+          });
+      })();
+    </script>
   </body>
 </html>
